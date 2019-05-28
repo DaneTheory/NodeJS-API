@@ -1,4 +1,7 @@
 {
+  "name": "NodeJS-API",
+  "version": 2,
+  "public": true,
   "alias": [
     "nodejs-api.danetheory.com"
   ],
@@ -8,7 +11,6 @@
     "silent": false,
     "autoJobCancelation": true
   },
-  "version": 2,
   "builds": [
     {
       "src": "index.js",
