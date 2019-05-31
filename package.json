@@ -1,6 +1,11 @@
 {
   "name": "nodejs-micro",
+  "scripts": {
+    "dev": "now dev --debug",
+    "deploy": "now" 
+  },
   "dependencies": {
-    "micro": "^9.3.5-canary.1"
+    "micro": "^9.3.5-canary.1",
+    "micro-fork": "^2.0.0"
   }
 }

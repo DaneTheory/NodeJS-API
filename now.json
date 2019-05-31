@@ -13,18 +13,25 @@
   },
   "builds": [
     {
-      "src": "index.js",
-      "use": "@now/node"
-     }
+      "src": "src/Lambdas/*.js",
+      "use": "@now/node",
+      "config": {
+        "maxLambdaSize": "50mb"
+      }
+    }
   ],
   "routes": [
     {
       "src": "/",
-      "dest": "/src/index.js" 
+      "dest": "src/Lambdas/RootLambda.js"
+    },
+    {
+      "src": "/health",
+      "dest": "src/Lambdas/HealthCheckLambda.js"
     },
     {
       "src": "/(.*)",
-      "dest": "/"
+      "status": 404
     }
   ]
 }
